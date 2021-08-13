@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Home</title>
+    <style>
+.top{
+    background-color: bisque;
+    text-align: center;
+    padding: 10px;
+
+}
+.lout{
+  text-align: end;
+}
+.bt{
+    background-color: rgb(196, 165, 127);
+}
+.btn-group{
+    width: 40px;
+}
+.btn btn-secondary{
+    background-color: bisque;
+
+}
+.head1{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+    </style>
+
+</head>
+<body>
+    <div class="top">
+        <h1>Password Manager</h1>
+    </div>
+    <div class="bt">
+        <div class="btn-group" role="group" >
+          
+
+          <form action="/add-details/{{tab}}" method="POST">
+            <button type="submit" class="btn btn-secondary" style="background-color:rgb(146, 123, 95);">Home</button>
+          </form>
+
+  <form action="/list/{{tab}}" method="post">
+    <button type="submit" class="btn btn-secondary" style="background-color:rgb(146, 123, 95);">List</button>
+  </form>
+
+  <form action="/search/{{tab}}" method="POST">
+    <button type="submit" class="btn btn-secondary" style="background-color:rgb(146, 123, 95);">Search</button>
+  </form>
+  <form action="/" method="POST">
+    <button type="submit" class="btn btn-secondary" style="background-color:rgb(146, 123, 95);width: fit-content;">Logout</button>
+  </form>
+</div>
+</div>
+
+  <form action="/add-details/{{tab}}" method="POST">
+  <input type="hidden" name="tab" placeholder="{{tab}}" id="tname"/>
+
+      <div class="jumbotron jumbotron-fluid" style="margin-left: 50px;margin-right: 50px;margin-top: 50px;background-color: rgb(255, 235, 210);font-family: 'Courier New', Courier, monospace;" >
+        <div class="head1">
+            <p>Enter Your Credentials</p>
+        </div>
+        <form style="margin-left: 100px;margin-right: 100px;margin-top: 20px;">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1" style="width: 200px;background-color: rgb(223, 195, 159);">Name</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1" name="detail">
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1" style="width: 200px;background-color: rgb(223, 195, 159);">Credential</span>
+                </div>
+                <input type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1" name="credential">
+              </div>
+            <br><br>
+            <button type="submit" class="btn btn-warning" style="background-color: rgb(243, 192, 130);">Submit</button>
+          </form>
+      </div>
+      </form>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Search</title>
+    <style>
+        .top{
+    background-color: bisque;
+    text-align: center;
+    padding: 10px;
+
+}
+.bt{
+    background-color: rgb(196, 165, 127);
+}
+.btn-group{
+    width: 40px;
+}
+.btn btn-secondary{
+    background-color: bisque;
+
+}
+.head1{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    font-size: xx-large;
+    text-align: center;
+
+}
+
+    </style>
+    
+</head>
+
+<body>
+    <div class="top">
+        <h1>Password Manager</h1>
+    </div>
+    <div class="bt">
+        <div class="btn-group" role="group" >
+          <form action="/add-details/{{tab}}" ,method="POST">
+            <button type="submit" class="btn btn-secondary" style="background-color:rgb(146, 123, 95);">Home</button>
+          </form>
+
+  <form action="/list/{{tab}}" ,method="POST">
+    <button type="submit" class="btn btn-secondary" style="background-color:rgb(146, 123, 95);">List</button>
+  </form>
+
+  <form action="/search/{{tab}}" ,method="POST">
+    <button type="submit" class="btn btn-secondary" style="background-color:rgb(146, 123, 95);">Search</button>
+  </form>
+  <form action="/" method="POST">
+    <button type="submit" class="btn btn-secondary" style="background-color:rgb(146, 123, 95);width: fit-content;">Logout</button>
+  </form>
+</div>
+</div>
+    <div class="jumbotron jumbotron-fluid" style="margin-left: 50px;margin-right: 50px;margin-top: 50px;background-color: rgb(255, 235, 210);font-family: 'Courier New', Courier, monospace;" >
+
+    
+    <form action="/search-details/{{tab}}" ,method="POST">
+        <div class="form">
+            <div class="inputfield">
+                <label>Enter the credential to be searched</label>
+                <input type="text" class="input" name="search">
+            </div>
+            
+            <div class="inputfield submit">
+                <button type="submit" class="btn btn-warning" style="background-color: rgb(243, 192, 130);margin-left: 250px;">Search</button>
+            </div>
+        </div>
+    <br><br>
+    <form action="/search-details/{{tab}}" ,method="GET">
+        <table class="table table-striped table-bordered" style="background-color: bisque;padding: 500px;">
+            <thead>
+                <td>Detail</td>
+                <td>Credential</td>
+             </thead>
+
+                <tr>
+                   <td>{{sear}}</td>
+                   <td>{{a}}</td>
+                </tr>
+          </table>
+        
+    </form>
+                
+</div>
+</body>
+</html>    
